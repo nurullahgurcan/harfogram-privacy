@@ -1,265 +1,823 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vocalis - Gizlilik Politikası / Privacy Policy</title>
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
+
+        body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.7; color: #333; background: #fafafa;
+            line-height: 1.7;
+            color: #333;
+            background: #fafafa;
             padding: 2rem 1rem;
         }
-        .container { max-width: 800px; margin: 0 auto; }
-        h1 { font-size: 1.8rem; margin-bottom: 0.5rem; color: #1a1a2e; }
-        h2 { font-size: 1.3rem; margin: 2rem 0 0.5rem; color: #16213e; border-bottom: 2px solid #e8e8e8; padding-bottom: 0.3rem; }
-        h3 { font-size: 1.1rem; margin: 1.5rem 0 0.3rem; color: #0f3460; }
-        p, li { font-size: 0.95rem; margin-bottom: 0.8rem; }
-        ul { padding-left: 1.5rem; }
-        .date { color: #888; font-size: 0.85rem; margin-bottom: 2rem; }
-        .lang-switch { 
-            display: flex; gap: 1rem; margin-bottom: 2rem; 
-            padding: 1rem; background: #fff; border-radius: 8px;
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a2e;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin: 2rem 0 0.5rem;
+            color: #16213e;
+            border-bottom: 2px solid #e8e8e8;
+            padding-bottom: 0.3rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.3rem;
+            color: #0f3460;
+        }
+
+        p, li {
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        a {
+            color: #3b5bdb;
+        }
+
+        .date {
+            color: #888;
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 8px;
             border: 1px solid #e0e0e0;
         }
-        .lang-switch a { 
-            padding: 0.5rem 1.5rem; border-radius: 6px; text-decoration: none;
-            color: #333; border: 1px solid #ddd; font-weight: 500;
+
+        .lang-switch a {
+            padding: 0.5rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ddd;
+            font-weight: 500;
         }
-        .lang-switch a.active { background: #1a1a2e; color: #fff; border-color: #1a1a2e; }
-        .section { background: #fff; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border: 1px solid #e8e8e8; }
-        .contact { background: #f0f4ff; padding: 1rem; border-radius: 6px; margin-top: 1rem; }
-        #en { display: none; }
+
+        .lang-switch a.active {
+            background: #1a1a2e;
+            color: #fff;
+            border-color: #1a1a2e;
+        }
+
+        .section {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid #e8e8e8;
+        }
+
+        .contact {
+            background: #f0f4ff;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+        }
+
+        .notice {
+            background: #fff8e6;
+            border: 1px solid #ffe0a3;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        #en {
+            display: none;
+        }
     </style>
+
     <script>
         function switchLang(lang) {
             document.getElementById('tr').style.display = lang === 'tr' ? 'block' : 'none';
             document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
-            document.querySelectorAll('.lang-switch a').forEach(a => a.classList.remove('active'));
-            document.querySelector('.lang-switch a[onclick*="'+lang+'"]').classList.add('active');
+
+            document.querySelectorAll('.lang-switch a').forEach(a => {
+                a.classList.remove('active');
+            });
+
+            document.querySelector('.lang-switch a[data-lang="' + lang + '"]').classList.add('active');
+
+            document.documentElement.lang = lang;
         }
     </script>
 </head>
+
 <body>
 <div class="container">
 
-<h1>Vocalis</h1>
-<div class="lang-switch">
-    <a href="#" class="active" onclick="switchLang('tr'); return false;">Türkçe</a>
-    <a href="#" onclick="switchLang('en'); return false;">English</a>
-</div>
+    <h1>Vocalis</h1>
 
-<!-- ═══════════════════════ TÜRKÇE ═══════════════════════ -->
-<div id="tr">
-<p class="date">Son güncelleme: Nisan 2026</p>
+    <div class="lang-switch">
+        <a href="#" class="active" data-lang="tr" onclick="switchLang('tr'); return false;">Türkçe</a>
+        <a href="#" data-lang="en" onclick="switchLang('en'); return false;">English</a>
+    </div>
 
-<div class="section">
-<h2>1. Genel Bakış</h2>
-<p>Vocalis ("Uygulama"), kelime tabanlı bir mobil oyundur. Bu gizlilik politikası, Uygulamayı kullandığınızda kişisel verilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu açıklar.</p>
-<p>Uygulamayı indirerek ve kullanarak bu politikayı kabul etmiş olursunuz.</p>
-</div>
+    <!-- ═══════════════════════ TÜRKÇE ═══════════════════════ -->
+    <div id="tr">
 
-<div class="section">
-<h2>2. Toplanan Veriler</h2>
+        <p class="date">Son güncelleme: Mayıs 2026</p>
 
-<h3>2.1 Doğrudan Sağladığınız Veriler</h3>
-<ul>
-    <li><strong>Oyuncu Adı (Takma Ad):</strong> Çok oyunculu modda diğer oyuncularla etkileşim için kullanılır. Bu ad cihazınızda yerel olarak saklanır.</li>
-</ul>
+        <div class="notice">
+            <p>
+                Bu Gizlilik Politikası, Vocalis mobil uygulamasını ("Uygulama") kullandığınızda
+                kişisel verilerinizin nasıl toplandığını, kullanıldığını, paylaşıldığını,
+                saklandığını ve korunduğunu açıklar.
+            </p>
+        </div>
 
-<h3>2.2 Otomatik Toplanan Veriler</h3>
-<ul>
-    <li><strong>Cihaz Bilgileri:</strong> İşletim sistemi, cihaz modeli, dil ayarı (hata ayıklama ve uyumluluk için).</li>
-    <li><strong>Oyun İstatistikleri:</strong> Oynanan oyun sayısı, kazanma/kaybetme oranı (yerel olarak saklanır).</li>
-    <li><strong>Reklam Tanımlayıcıları:</strong> Google Advertising ID (GAID) veya Apple IDFA — yalnızca reklam gösterimi amacıyla, üçüncü taraf reklam ortaklarımız tarafından kullanılır.</li>
-</ul>
+        <div class="section">
+            <h2>1. Genel Bakış</h2>
+            <p>
+                Vocalis, kelime tabanlı bir mobil oyundur. Uygulama; tek oyunculu ve/veya
+                çok oyunculu oyun deneyimi, oyun içi ekonomi, reklam gösterimi ve temel
+                performans iyileştirmeleri için bazı verileri işleyebilir.
+            </p>
+            <p>
+                Uygulamayı indirerek, kurarak veya kullanarak bu Gizlilik Politikasında
+                açıklanan veri işleme uygulamalarını kabul etmiş olursunuz.
+            </p>
+            <p>
+                Uygulamanın kullanım koşulları için Kullanım Şartları sayfamızı inceleyebilirsiniz:
+                <br />
+                <a href="https://nurullahgurcan.github.io/vocalis-terms/index.html" target="_blank" rel="noopener">
+                    Kullanım Şartları
+                </a>
+            </p>
+        </div>
 
-<h3>2.3 Toplamadığımız Veriler</h3>
-<ul>
-    <li>Gerçek ad, soyad, e-posta adresi veya telefon numarası</li>
-    <li>Konum bilgisi (GPS)</li>
-    <li>Kişi listesi, fotoğraf veya dosyalar</li>
-    <li>Finansal bilgiler (ödeme işlemleri uygulama mağazaları tarafından yönetilir)</li>
-</ul>
-</div>
+        <div class="section">
+            <h2>2. Veri Sorumlusu ve İletişim</h2>
+            <p>
+                Bu Gizlilik Politikası kapsamında veri sorumlusu / geliştirici:
+            </p>
+            <div class="contact">
+                <p><strong>Geliştirici:</strong> [BURAYA_ISIM_VEYA_FIRMA_ADINI_YAZ]</p>
+                <p><strong>E-posta:</strong> <a href="mailto:nurullahgrcn@gmail.com">nurullahgrcn@gmail.com</a></p>
+            </div>
+            <p>
+                Gizlilik, veri silme, erişim veya diğer talepleriniz için yukarıdaki e-posta
+                adresinden bizimle iletişime geçebilirsiniz.
+            </p>
+        </div>
 
-<div class="section">
-<h2>3. Üçüncü Taraf Hizmetler</h2>
-<p>Uygulamamız aşağıdaki üçüncü taraf hizmetlerini kullanmaktadır:</p>
+        <div class="section">
+            <h2>3. Toplanan Veriler</h2>
 
-<h3>3.1 Photon (Exit Games)</h3>
-<p>Çok oyunculu oyun altyapısı için kullanılır. Photon, oyun oturumu sırasında geçici bağlantı verilerini (IP adresi, oyuncu takma adı) işler. Bu veriler oturum sonunda silinir.</p>
-<p>Gizlilik politikası: <a href="https://www.photonengine.com/privacy" target="_blank">photonengine.com/privacy</a></p>
+            <h3>3.1 Doğrudan Sağladığınız Veriler</h3>
+            <ul>
+                <li>
+                    <strong>Oyuncu Adı / Takma Ad:</strong>
+                    Çok oyunculu modda diğer oyuncularla etkileşim için kullanılabilir.
+                    Oyuncu adı genellikle cihazınızda yerel olarak saklanır.
+                </li>
+            </ul>
 
-<h3>3.2 Google AdMob</h3>
-<p>Uygulama içi reklam gösterimi için kullanılır. AdMob, kişiselleştirilmiş reklam sunmak amacıyla cihaz tanımlayıcıları ve kullanım verilerini toplayabilir.</p>
-<p>Gizlilik politikası: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></p>
+            <h3>3.2 Otomatik Olarak İşlenen veya Toplanan Veriler</h3>
+            <ul>
+                <li>
+                    <strong>Cihaz Bilgileri:</strong>
+                    İşletim sistemi, cihaz modeli, uygulama sürümü, dil ayarı ve benzeri
+                    teknik bilgiler; hata ayıklama, uyumluluk ve performans iyileştirme
+                    amacıyla işlenebilir.
+                </li>
+                <li>
+                    <strong>Oyun İstatistikleri:</strong>
+                    Oynanan oyun sayısı, kazanma/kaybetme oranı, skorlar, oyun içi ilerleme,
+                    altın/ödül bilgileri ve benzeri oyun verileri. Bu veriler çoğunlukla
+                    cihazınızda yerel olarak saklanır.
+                </li>
+                <li>
+                    <strong>Çok Oyunculu Oturum Verileri:</strong>
+                    Çok oyunculu oyun altyapısı kapsamında IP adresi, oyuncu takma adı,
+                    oda/oturum bilgisi ve bağlantı bilgileri geçici olarak işlenebilir.
+                </li>
+                <li>
+                    <strong>Reklam Tanımlayıcıları:</strong>
+                    Google Advertising ID (GAID) veya Apple IDFA gibi reklam tanımlayıcıları,
+                    yalnızca reklam gösterimi, reklam ölçümü ve reklam tercihlerinize uygun
+                    reklam sunumu amacıyla üçüncü taraf reklam ortaklarımız tarafından
+                    kullanılabilir.
+                </li>
+                <li>
+                    <strong>Kullanım ve Tanılama Verileri:</strong>
+                    Uygulama performansı, çökme raporları, hata kayıtları ve benzeri teknik
+                    veriler, uygulamayı iyileştirmek ve sorunları gidermek amacıyla işlenebilir.
+                </li>
+            </ul>
 
-<h3>3.3 Unity Analytics (isteğe bağlı)</h3>
-<p>Oyun performansı ve hata raporlama amacıyla kullanılabilir.</p>
-<p>Gizlilik politikası: <a href="https://unity.com/legal/privacy-policy" target="_blank">unity.com/legal/privacy-policy</a></p>
-</div>
+            <h3>3.3 Toplamadığımız Veriler</h3>
+            <ul>
+                <li>Gerçek ad, soyad, e-posta adresi veya telefon numarası, kullanıcı bize doğrudan iletmediği sürece</li>
+                <li>Kesin konum bilgisi / GPS konumu</li>
+                <li>Kişi listesi</li>
+                <li>Fotoğraf, video veya cihaz dosyaları</li>
+                <li>Sağlık, biyometrik veya hassas özel nitelikli kişisel veriler</li>
+                <li>Finansal bilgiler; ödeme işlemleri Google Play veya Apple App Store tarafından yönetilir</li>
+            </ul>
+        </div>
 
-<div class="section">
-<h2>4. Veri Kullanım Amaçları</h2>
-<ul>
-    <li>Çok oyunculu oyun deneyiminin sağlanması</li>
-    <li>Reklam gösterimi yoluyla uygulamanın ücretsiz sunulması</li>
-    <li>Uygulama performansının iyileştirilmesi ve hata giderme</li>
-    <li>Oyun içi ekonominin yönetimi (altın, ödüller)</li>
-</ul>
-</div>
+        <div class="section">
+            <h2>4. Verileri Kullanma Amaçlarımız</h2>
+            <p>Verileri aşağıdaki amaçlarla kullanabiliriz:</p>
+            <ul>
+                <li>Uygulamanın temel oyun özelliklerini sağlamak,</li>
+                <li>Çok oyunculu oyun deneyimini sunmak,</li>
+                <li>Oyun içi ekonomiyi yönetmek; altın, ödül, skor ve ilerleme bilgilerini takip etmek,</li>
+                <li>Reklam gösterimi yoluyla Uygulamanın ücretsiz sunulmasına yardımcı olmak,</li>
+                <li>Reklam tercihlerinize göre kişiselleştirilmiş veya genel reklam göstermek,</li>
+                <li>Uygulama performansını iyileştirmek, hataları tespit etmek ve teknik sorunları gidermek,</li>
+                <li>Hile, kötüye kullanım, güvenlik ihlali veya yetkisiz erişim girişimlerini önlemek,</li>
+                <li>Yasal yükümlülükleri yerine getirmek.</li>
+            </ul>
+        </div>
 
-<div class="section">
-<h2>5. Veri Saklama ve Güvenlik</h2>
-<p>Oyuncu adı ve oyun ayarları yalnızca cihazınızda (PlayerPrefs) saklanır. Sunucularımızda kişisel veri tutulmaz. Photon oturum verileri geçicidir ve oyun bitiminde silinir.</p>
-</div>
+        <div class="section">
+            <h2>5. Üçüncü Taraf Hizmetler</h2>
+            <p>
+                Uygulamamız aşağıdaki üçüncü taraf hizmetleri kullanabilir. Bu hizmetler,
+                kendi gizlilik politikalarına ve kullanım şartlarına göre veri işleyebilir.
+            </p>
 
-<div class="section">
-<h2>6. Çocukların Gizliliği</h2>
-<p>Uygulamamız 13 yaş altı çocuklara yönelik değildir. Bilerek 13 yaş altı çocuklardan kişisel veri toplamayız. Eğer bir ebeveyn veya vasi olarak çocuğunuzun veri paylaştığını fark ederseniz, lütfen bizimle iletişime geçin.</p>
-</div>
+            <h3>5.1 Photon / Exit Games</h3>
+            <p>
+                Photon, çok oyunculu oyun altyapısı için kullanılabilir. Oyun oturumu sırasında
+                bağlantı verileri, IP adresi, oda/oturum bilgileri ve oyuncu takma adı gibi
+                veriler geçici olarak işlenebilir.
+            </p>
+            <p>
+                Gizlilik politikası:
+                <a href="https://www.photonengine.com/privacy" target="_blank" rel="noopener">
+                    photonengine.com/privacy
+                </a>
+            </p>
 
-<div class="section">
-<h2>7. KVKK Kapsamında Haklarınız (Türkiye)</h2>
-<p>6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında aşağıdaki haklara sahipsiniz:</p>
-<ul>
-    <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
-    <li>İşlenmiş ise bilgi talep etme</li>
-    <li>İşlenme amacını ve amaca uygun kullanılıp kullanılmadığını öğrenme</li>
-    <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme</li>
-    <li>Silinmesini veya yok edilmesini isteme</li>
-    <li>İşlenen verilerin üçüncü kişilere bildirilmesini isteme</li>
-    <li>Aleyhinize bir sonuç doğmasına itiraz etme</li>
-</ul>
-</div>
+            <h3>5.2 Google AdMob</h3>
+            <p>
+                Google AdMob, uygulama içi reklam gösterimi için kullanılabilir. AdMob,
+                reklam tanımlayıcıları, cihaz bilgileri, kullanım verileri ve reklam etkileşimleri
+                gibi verileri reklam gösterimi, reklam ölçümü ve kişiselleştirilmiş reklamlar
+                için işleyebilir.
+            </p>
+            <p>
+                Gizlilik politikası:
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+                    policies.google.com/privacy
+                </a>
+            </p>
 
-<div class="section">
-<h2>8. GDPR Kapsamında Haklarınız (AB)</h2>
-<p>Avrupa Birliği Genel Veri Koruma Tüzüğü kapsamında ek haklara sahipsiniz: veri taşınabilirliği, işlemenin kısıtlanması ve otomatik karar almaya itiraz hakkı.</p>
-</div>
+            <h3>5.3 Unity Analytics / Unity Services</h3>
+            <p>
+                Unity Analytics veya benzeri Unity hizmetleri, oyun performansı, analiz,
+                hata raporlama veya teknik iyileştirme amacıyla kullanılabilir.
+            </p>
+            <p>
+                Gizlilik politikası:
+                <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">
+                    unity.com/legal/privacy-policy
+                </a>
+            </p>
 
-<div class="section">
-<h2>9. Reklam Tercihleri</h2>
-<p>Kişiselleştirilmiş reklamları kapatmak için:</p>
-<ul>
-    <li><strong>Android:</strong> Ayarlar → Google → Reklamlar → Reklam kişiselleştirmeyi devre dışı bırak</li>
-    <li><strong>iOS:</strong> Ayarlar → Gizlilik → İzleme → Uygulamaların sizi izlemesine izin ver seçeneğini kapatın</li>
-</ul>
-</div>
+            <h3>5.4 Uygulama Mağazaları</h3>
+            <p>
+                Uygulama içi satın alma veya indirme işlemleri Google Play ve Apple App Store
+                tarafından yönetilebilir. Ödeme, faturalandırma ve iade süreçleri ilgili
+                platformların kendi politikalarına tabidir.
+            </p>
+        </div>
 
-<div class="section">
-<h2>10. Değişiklikler</h2>
-<p>Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler uygulama içi bildirimle duyurulacaktır.</p>
-</div>
+        <div class="section">
+            <h2>6. Reklam Tercihleri ve Rıza</h2>
+            <p>
+                Uygulama, kişiselleştirilmiş veya kişiselleştirilmemiş/genel reklamlar
+                gösterebilir. Uygulama içinde gösterilen rıza ekranından reklam tercihinizi
+                seçebilirsiniz.
+            </p>
+            <ul>
+                <li>
+                    <strong>Kişiselleştirilmiş reklamlar:</strong>
+                    Reklam tanımlayıcıları ve kullanım verileri reklamları size daha uygun
+                    hale getirmek için kullanılabilir.
+                </li>
+                <li>
+                    <strong>Genel reklamlar:</strong>
+                    Reklamlar kişisel tercihlere göre uyarlanmaz; ancak reklam gösterimi ve
+                    güvenlik amacıyla bazı teknik veriler yine işlenebilir.
+                </li>
+            </ul>
+            <p>
+                Kişiselleştirilmiş reklamları cihaz ayarlarınızdan da sınırlayabilirsiniz:
+            </p>
+            <ul>
+                <li>
+                    <strong>Android:</strong>
+                    Ayarlar → Google → Reklamlar → Reklam kişiselleştirmeyi devre dışı bırak
+                    veya reklam kimliğini sıfırla.
+                </li>
+                <li>
+                    <strong>iOS:</strong>
+                    Ayarlar → Gizlilik ve Güvenlik → İzleme → Uygulamaların sizi izlemesine
+                    izin ver seçeneğini kapatın.
+                </li>
+            </ul>
+        </div>
 
-<div class="section">
-<h2>11. İletişim</h2>
-<div class="contact">
-    <p><strong>E-posta:</strong> [BURAYA_EMAIL_ADRESINI_YAZ]</p>
-    <p><strong>Geliştirici:</strong> [BURAYA_ISIM_VEYA_FIRMA_ADINI_YAZ]</p>
-</div>
-</div>
-</div>
+        <div class="section">
+            <h2>7. Veri Saklama</h2>
+            <p>
+                Oyuncu adı, oyun ayarları, oyun istatistikleri, altın/ödül bilgileri ve benzeri
+                oyun verileri çoğunlukla cihazınızda yerel olarak saklanır.
+            </p>
+            <p>
+                Çok oyunculu oturum verileri, ilgili hizmet sağlayıcının teknik işleyişi
+                kapsamında geçici olarak işlenebilir ve genellikle oturum sonlandığında veya
+                hizmet sağlayıcının saklama politikalarına göre silinir.
+            </p>
+            <p>
+                Reklam, analiz ve hata raporlama verileri, ilgili üçüncü taraf hizmetlerin
+                kendi saklama politikalarına göre saklanabilir.
+            </p>
+        </div>
 
-<!-- ═══════════════════════ ENGLISH ═══════════════════════ -->
-<div id="en">
-<p class="date">Last updated: April 2026</p>
+        <div class="section">
+            <h2>8. Veri Silme</h2>
+            <p>
+                Cihazınızda yerel olarak saklanan oyun verilerini silmek için Uygulamayı
+                cihazınızdan kaldırabilir veya cihazınızın uygulama verilerini temizleyebilirsiniz.
+            </p>
+            <p>
+                Bizimle paylaştığınız veya üçüncü taraf hizmetler aracılığıyla işlenen verilerle
+                ilgili erişim, düzeltme veya silme talepleriniz için
+                <a href="mailto:nurullahgrcn@gmail.com">nurullahgrcn@gmail.com</a>
+                adresinden bizimle iletişime geçebilirsiniz.
+            </p>
+            <p>
+                Üçüncü taraf hizmetler tarafından işlenen veriler için ilgili hizmet sağlayıcının
+                gizlilik araçlarını veya destek kanallarını kullanmanız gerekebilir.
+            </p>
+        </div>
 
-<div class="section">
-<h2>1. Overview</h2>
-<p>Vocalis ("App") is a word-based mobile game. This privacy policy explains how your personal data is collected, used, and protected when you use the App.</p>
-<p>By downloading and using the App, you agree to this policy.</p>
-</div>
+        <div class="section">
+            <h2>9. Veri Güvenliği</h2>
+            <p>
+                Kişisel verilerinizi yetkisiz erişim, kayıp, kötüye kullanım veya ifşaya karşı
+                korumak için makul teknik ve idari önlemler almaya çalışırız.
+            </p>
+            <p>
+                Bununla birlikte, internet üzerinden yapılan hiçbir veri aktarımının veya
+                elektronik saklama yönteminin tamamen güvenli olduğu garanti edilemez.
+            </p>
+        </div>
 
-<div class="section">
-<h2>2. Data We Collect</h2>
+        <div class="section">
+            <h2>10. Çocukların Gizliliği</h2>
+            <p>
+                Uygulamamız 13 yaş altı çocuklara yönelik değildir. Bilerek 13 yaş altı
+                çocuklardan kişisel veri toplamıyoruz.
+            </p>
+            <p>
+                Bir ebeveyn veya vasi olarak çocuğunuzun bize kişisel veri sağladığını
+                düşünüyorsanız, lütfen bizimle iletişime geçin. Gerekli kontrollerden sonra
+                ilgili verileri silmek için makul adımları atacağız.
+            </p>
+        </div>
 
-<h3>2.1 Data You Provide</h3>
-<ul>
-    <li><strong>Player Name (Nickname):</strong> Used for interaction in multiplayer mode. Stored locally on your device.</li>
-</ul>
+        <div class="section">
+            <h2>11. KVKK Kapsamında Haklarınız</h2>
+            <p>
+                6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında aşağıdaki haklara
+                sahip olabilirsiniz:
+            </p>
+            <ul>
+                <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme,</li>
+                <li>İşlenmiş ise buna ilişkin bilgi talep etme,</li>
+                <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+                <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme,</li>
+                <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme,</li>
+                <li>Silinmesini veya yok edilmesini isteme,</li>
+                <li>Düzeltme, silme veya yok etme işlemlerinin üçüncü kişilere bildirilmesini isteme,</li>
+                <li>Aleyhinize bir sonucun ortaya çıkmasına itiraz etme,</li>
+                <li>Kanuna aykırı işleme nedeniyle zarara uğramanız halinde tazminat talep etme.</li>
+            </ul>
+        </div>
 
-<h3>2.2 Automatically Collected Data</h3>
-<ul>
-    <li><strong>Device Information:</strong> Operating system, device model, language setting (for debugging and compatibility).</li>
-    <li><strong>Game Statistics:</strong> Games played, win/loss ratio (stored locally).</li>
-    <li><strong>Advertising Identifiers:</strong> Google Advertising ID (GAID) or Apple IDFA — used solely for ad serving by our third-party advertising partners.</li>
-</ul>
+        <div class="section">
+            <h2>12. GDPR Kapsamında Haklarınız</h2>
+            <p>
+                Avrupa Birliği Genel Veri Koruma Tüzüğü kapsamında, geçerli olması halinde
+                aşağıdaki haklara sahip olabilirsiniz:
+            </p>
+            <ul>
+                <li>Kişisel verilerinize erişim talep etme,</li>
+                <li>Yanlış veya eksik verilerin düzeltilmesini isteme,</li>
+                <li>Verilerinizin silinmesini isteme,</li>
+                <li>İşlemenin kısıtlanmasını talep etme,</li>
+                <li>Veri taşınabilirliği talep etme,</li>
+                <li>İşlemeye itiraz etme,</li>
+                <li>Rızaya dayalı işlemlerde rızanızı geri çekme.</li>
+            </ul>
+        </div>
 
-<h3>2.3 Data We Do NOT Collect</h3>
-<ul>
-    <li>Real name, email address, or phone number</li>
-    <li>Location data (GPS)</li>
-    <li>Contacts, photos, or files</li>
-    <li>Financial information (payments are handled by app stores)</li>
-</ul>
-</div>
+        <div class="section">
+            <h2>13. Uluslararası Veri Aktarımları</h2>
+            <p>
+                Uygulamada kullanılan üçüncü taraf hizmetler, verileri farklı ülkelerdeki
+                sunucularda işleyebilir. Bu durumda veriler, ilgili hizmet sağlayıcının
+                güvenlik ve gizlilik politikalarına göre işlenir.
+            </p>
+        </div>
 
-<div class="section">
-<h2>3. Third-Party Services</h2>
+        <div class="section">
+            <h2>14. Değişiklikler</h2>
+            <p>
+                Bu Gizlilik Politikası zaman zaman güncellenebilir. Önemli değişikliklerde
+                Uygulama içinde bildirim gösterilebilir veya yeniden onayınız istenebilir.
+            </p>
+            <p>
+                En güncel sürüm her zaman bu sayfada yayınlanır. Politikayı düzenli olarak
+                kontrol etmenizi öneririz.
+            </p>
+        </div>
 
-<h3>3.1 Photon (Exit Games)</h3>
-<p>Used for multiplayer game infrastructure. Photon processes temporary connection data (IP address, player nickname) during game sessions. This data is deleted after the session ends.</p>
-<p>Privacy policy: <a href="https://www.photonengine.com/privacy" target="_blank">photonengine.com/privacy</a></p>
+        <div class="section">
+            <h2>15. İletişim</h2>
+            <div class="contact">
+                <p><strong>E-posta:</strong> <a href="mailto:nurullahgrcn@gmail.com">nurullahgrcn@gmail.com</a></p>
+                <p><strong>Geliştirici:</strong> [BURAYA_ISIM_VEYA_FIRMA_ADINI_YAZ]</p>
+                <p>
+                    <strong>Kullanım Şartları:</strong>
+                    <a href="https://nurullahgurcan.github.io/vocalis-terms/index.html" target="_blank" rel="noopener">
+                        Vocalis Kullanım Şartları
+                    </a>
+                </p>
+            </div>
+        </div>
 
-<h3>3.2 Google AdMob</h3>
-<p>Used for in-app advertising. AdMob may collect device identifiers and usage data to serve personalized ads.</p>
-<p>Privacy policy: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></p>
+    </div>
 
-<h3>3.3 Unity Analytics (optional)</h3>
-<p>May be used for game performance monitoring and crash reporting.</p>
-<p>Privacy policy: <a href="https://unity.com/legal/privacy-policy" target="_blank">unity.com/legal/privacy-policy</a></p>
-</div>
+    <!-- ═══════════════════════ ENGLISH ═══════════════════════ -->
+    <div id="en">
 
-<div class="section">
-<h2>4. How We Use Data</h2>
-<ul>
-    <li>To provide multiplayer game experience</li>
-    <li>To serve ads and keep the app free</li>
-    <li>To improve app performance and fix bugs</li>
-    <li>To manage in-game economy (gold, rewards)</li>
-</ul>
-</div>
+        <p class="date">Last updated: May 2026</p>
 
-<div class="section">
-<h2>5. Data Storage and Security</h2>
-<p>Player name and game settings are stored only on your device (PlayerPrefs). No personal data is stored on our servers. Photon session data is temporary and deleted when the game ends.</p>
-</div>
+        <div class="notice">
+            <p>
+                This Privacy Policy explains how your personal data is collected, used,
+                shared, stored, and protected when you use the Vocalis mobile application
+                ("App").
+            </p>
+        </div>
 
-<div class="section">
-<h2>6. Children's Privacy</h2>
-<p>Our App is not intended for children under 13. We do not knowingly collect personal data from children under 13. If you are a parent or guardian and believe your child has shared data, please contact us.</p>
-</div>
+        <div class="section">
+            <h2>1. Overview</h2>
+            <p>
+                Vocalis is a word-based mobile game. The App may process certain data to
+                provide single-player and/or multiplayer gameplay, in-game economy features,
+                advertising, and basic performance improvements.
+            </p>
+            <p>
+                By downloading, installing, or using the App, you agree to the data practices
+                described in this Privacy Policy.
+            </p>
+            <p>
+                Please review our Terms of Service for the conditions that apply to your use
+                of the App:
+                <br />
+                <a href="https://nurullahgurcan.github.io/vocalis-terms/index.html" target="_blank" rel="noopener">
+                    Terms of Service
+                </a>
+            </p>
+        </div>
 
-<div class="section">
-<h2>7. Your Rights (GDPR)</h2>
-<p>Under the General Data Protection Regulation, you have the right to access, rectify, erase, restrict processing, data portability, and object to automated decision-making regarding your personal data.</p>
-</div>
+        <div class="section">
+            <h2>2. Data Controller and Contact</h2>
+            <p>
+                The data controller / developer under this Privacy Policy is:
+            </p>
+            <div class="contact">
+                <p><strong>Developer:</strong> [YOUR_NAME_OR_COMPANY_HERE]</p>
+                <p><strong>Email:</strong> <a href="mailto:nurullahgrcn@gmail.com">nurullahgrcn@gmail.com</a></p>
+            </div>
+            <p>
+                You may contact us at the email address above for privacy, data deletion,
+                access, or other data-related requests.
+            </p>
+        </div>
 
-<div class="section">
-<h2>8. Ad Preferences</h2>
-<p>To opt out of personalized advertising:</p>
-<ul>
-    <li><strong>Android:</strong> Settings → Google → Ads → Opt out of ads personalization</li>
-    <li><strong>iOS:</strong> Settings → Privacy → Tracking → Disable "Allow Apps to Request to Track"</li>
-</ul>
-</div>
+        <div class="section">
+            <h2>3. Data We Collect</h2>
 
-<div class="section">
-<h2>9. Changes</h2>
-<p>This privacy policy may be updated from time to time. Significant changes will be announced via in-app notification.</p>
-</div>
+            <h3>3.1 Data You Provide Directly</h3>
+            <ul>
+                <li>
+                    <strong>Player Name / Nickname:</strong>
+                    May be used for interaction in multiplayer modes. The player name is
+                    generally stored locally on your device.
+                </li>
+            </ul>
 
-<div class="section">
-<h2>10. Contact</h2>
-<div class="contact">
-    <p><strong>Email:</strong> [YOUR_EMAIL_HERE]</p>
-    <p><strong>Developer:</strong> [YOUR_NAME_OR_COMPANY_HERE]</p>
-</div>
-</div>
-</div>
+            <h3>3.2 Data Processed or Collected Automatically</h3>
+            <ul>
+                <li>
+                    <strong>Device Information:</strong>
+                    Operating system, device model, app version, language setting, and similar
+                    technical information may be processed for debugging, compatibility, and
+                    performance improvement.
+                </li>
+                <li>
+                    <strong>Game Statistics:</strong>
+                    Number of games played, win/loss ratio, scores, in-game progress, gold/reward
+                    information, and similar gameplay data. This data is mostly stored locally
+                    on your device.
+                </li>
+                <li>
+                    <strong>Multiplayer Session Data:</strong>
+                    IP address, player nickname, room/session information, and connection data
+                    may be temporarily processed as part of the multiplayer infrastructure.
+                </li>
+                <li>
+                    <strong>Advertising Identifiers:</strong>
+                    Google Advertising ID (GAID) or Apple IDFA may be used by third-party
+                    advertising partners solely for ad serving, ad measurement, and serving ads
+                    according to your advertising preference.
+                </li>
+                <li>
+                    <strong>Usage and Diagnostic Data:</strong>
+                    App performance data, crash reports, error logs, and similar technical data
+                    may be processed to improve the App and fix issues.
+                </li>
+            </ul>
+
+            <h3>3.3 Data We Do Not Collect</h3>
+            <ul>
+                <li>Real name, surname, email address, or phone number, unless you directly provide it to us</li>
+                <li>Precise location / GPS location</li>
+                <li>Contacts</li>
+                <li>Photos, videos, or device files</li>
+                <li>Health, biometric, or sensitive personal data</li>
+                <li>Financial information; payments are handled by Google Play or Apple App Store</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. How We Use Data</h2>
+            <p>We may use data for the following purposes:</p>
+            <ul>
+                <li>To provide the App's core gameplay features,</li>
+                <li>To provide multiplayer gameplay experience,</li>
+                <li>To manage in-game economy, including gold, rewards, scores, and progress,</li>
+                <li>To help keep the App free through advertising,</li>
+                <li>To display personalized or non-personalized ads based on your advertising preference,</li>
+                <li>To improve app performance, detect errors, and fix technical issues,</li>
+                <li>To prevent cheating, abuse, security breaches, or unauthorized access,</li>
+                <li>To comply with legal obligations.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. Third-Party Services</h2>
+            <p>
+                Our App may use the following third-party services. These services may process
+                data according to their own privacy policies and terms.
+            </p>
+
+            <h3>5.1 Photon / Exit Games</h3>
+            <p>
+                Photon may be used for multiplayer game infrastructure. During game sessions,
+                connection data, IP address, room/session information, and player nickname may
+                be temporarily processed.
+            </p>
+            <p>
+                Privacy policy:
+                <a href="https://www.photonengine.com/privacy" target="_blank" rel="noopener">
+                    photonengine.com/privacy
+                </a>
+            </p>
+
+            <h3>5.2 Google AdMob</h3>
+            <p>
+                Google AdMob may be used for in-app advertising. AdMob may process advertising
+                identifiers, device information, usage data, and ad interactions for ad serving,
+                ad measurement, and personalized advertising.
+            </p>
+            <p>
+                Privacy policy:
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+                    policies.google.com/privacy
+                </a>
+            </p>
+
+            <h3>5.3 Unity Analytics / Unity Services</h3>
+            <p>
+                Unity Analytics or similar Unity services may be used for game performance,
+                analytics, crash reporting, or technical improvement purposes.
+            </p>
+            <p>
+                Privacy policy:
+                <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">
+                    unity.com/legal/privacy-policy
+                </a>
+            </p>
+
+            <h3>5.4 App Stores</h3>
+            <p>
+                In-app purchases or downloads may be handled by Google Play and Apple App Store.
+                Payment, billing, and refund processes are subject to the policies of the
+                relevant platform.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>6. Advertising Preferences and Consent</h2>
+            <p>
+                The App may display personalized or non-personalized/general ads. You can choose
+                your advertising preference through the consent screen shown inside the App.
+            </p>
+            <ul>
+                <li>
+                    <strong>Personalized ads:</strong>
+                    Advertising identifiers and usage data may be used to make ads more relevant
+                    to you.
+                </li>
+                <li>
+                    <strong>General ads:</strong>
+                    Ads are not tailored based on your personal preferences; however, some
+                    technical data may still be processed for ad delivery and security.
+                </li>
+            </ul>
+            <p>
+                You can also limit personalized advertising from your device settings:
+            </p>
+            <ul>
+                <li>
+                    <strong>Android:</strong>
+                    Settings → Google → Ads → Opt out of ads personalization or reset advertising ID.
+                </li>
+                <li>
+                    <strong>iOS:</strong>
+                    Settings → Privacy & Security → Tracking → Disable allowing apps to request
+                    to track you.
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. Data Retention</h2>
+            <p>
+                Player name, game settings, game statistics, gold/reward information, and similar
+                gameplay data are mostly stored locally on your device.
+            </p>
+            <p>
+                Multiplayer session data may be temporarily processed as part of the technical
+                operation of the relevant service provider and is generally deleted when the
+                session ends or according to the provider's retention policies.
+            </p>
+            <p>
+                Advertising, analytics, and crash reporting data may be retained according to
+                the retention policies of the relevant third-party services.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>8. Data Deletion</h2>
+            <p>
+                To delete gameplay data stored locally on your device, you may uninstall the
+                App or clear the App's data from your device settings.
+            </p>
+            <p>
+                For access, correction, or deletion requests regarding data shared with us or
+                processed through third-party services, you may contact us at
+                <a href="mailto:nurullahgrcn@gmail.com">nurullahgrcn@gmail.com</a>.
+            </p>
+            <p>
+                For data processed by third-party services, you may need to use the relevant
+                service provider's privacy tools or support channels.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>9. Data Security</h2>
+            <p>
+                We try to use reasonable technical and administrative measures to protect your
+                personal data against unauthorized access, loss, misuse, or disclosure.
+            </p>
+            <p>
+                However, no method of transmission over the internet or electronic storage is
+                completely secure.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>10. Children's Privacy</h2>
+            <p>
+                Our App is not intended for children under 13. We do not knowingly collect
+                personal data from children under 13.
+            </p>
+            <p>
+                If you are a parent or guardian and believe your child has provided personal
+                data to us, please contact us. After appropriate review, we will take reasonable
+                steps to delete such data.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>11. Your Rights Under KVKK</h2>
+            <p>
+                Under the Turkish Personal Data Protection Law No. 6698, you may have the
+                following rights:
+            </p>
+            <ul>
+                <li>To learn whether your personal data is processed,</li>
+                <li>To request information if your personal data has been processed,</li>
+                <li>To learn the purpose of processing and whether it is used appropriately,</li>
+                <li>To know the third parties to whom data is transferred domestically or abroad,</li>
+                <li>To request correction of incomplete or inaccurate data,</li>
+                <li>To request deletion or destruction of your data,</li>
+                <li>To request notification of correction or deletion to third parties,</li>
+                <li>To object to results against you,</li>
+                <li>To claim compensation if you suffer damage due to unlawful processing.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>12. Your Rights Under GDPR</h2>
+            <p>
+                Where applicable, under the General Data Protection Regulation, you may have
+                the following rights:
+            </p>
+            <ul>
+                <li>To request access to your personal data,</li>
+                <li>To request correction of inaccurate or incomplete data,</li>
+                <li>To request deletion of your data,</li>
+                <li>To request restriction of processing,</li>
+                <li>To request data portability,</li>
+                <li>To object to processing,</li>
+                <li>To withdraw consent where processing is based on consent.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>13. International Data Transfers</h2>
+            <p>
+                Third-party services used in the App may process data on servers located in
+                different countries. In such cases, data is processed according to the security
+                and privacy policies of the relevant service provider.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>14. Changes</h2>
+            <p>
+                This Privacy Policy may be updated from time to time. For significant changes,
+                the App may display a notice or ask for your consent again.
+            </p>
+            <p>
+                The latest version will always be available on this page. We recommend reviewing
+                this Policy periodically.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>15. Contact</h2>
+            <div class="contact">
+                <p><strong>Email:</strong> <a href="mailto:nurullahgrcn@gmail.com">nurullahgrcn@gmail.com</a></p>
+                <p><strong>Developer:</strong> [YOUR_NAME_OR_COMPANY_HERE]</p>
+                <p>
+                    <strong>Terms of Service:</strong>
+                    <a href="https://nurullahgurcan.github.io/vocalis-terms/index.html" target="_blank" rel="noopener">
+                        Vocalis Terms of Service
+                    </a>
+                </p>
+            </div>
+        </div>
+
+    </div>
 
 </div>
 </body>
